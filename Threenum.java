@@ -1,3 +1,4 @@
+//get num fron user and add it
 import java.util.Scanner;
  class Threenum{
 public static void main(String[]args){
