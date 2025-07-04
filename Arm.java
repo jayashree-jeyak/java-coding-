@@ -1,29 +1,26 @@
-class Arm{
+class arm{
     public static void main(String[] args) {
-        int n=15351;
-        int temp=n;
-        int dc=n;
-        int len=0;
-        double sum=0;
-        while(n>0){
-            len++;
-            n=n/10;
-
-        }
-        while(dc>0){
-            int rem=dc%10;
-            sum=sum+Math.pow(rem,len);
-            dc=dc/10;
-
-        }
-        if(temp==sum){
-            System.out.println("is armstrong");
-        }
-        else{
-            System.out.println("not a armstrong number");
-        }
-
-    
-
+      int num=153;
+      int count=0;
+      int num1=num;
+      while(num1>0){
+        int digit=num1%10;
+        count++;
+        num1=num1/10;
+      }  
+      int temp=num;
+      //int check=num;
+      double sum=0;
+      while(temp>0){
+        int val=temp%10;
+        sum=sum+Math.pow(val,count);
+        temp=temp/10;
+      }
+      if(num==sum){
+      System.out.println("yes armstrong");
+      }
+      else{
+        System.out.println("no");
+      }
     }
 }
