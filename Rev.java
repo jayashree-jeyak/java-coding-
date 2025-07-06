@@ -1,13 +1,16 @@
-//here we are going to reverse a num
-class Rev{
-    public static void main(String[] args) {
-        int num=12345;
-        int rev=1;
-        while(num>0){
-            int digit=num%10;
-            rev=rev*10+digit;
-            num=num/10;
+class rev{
+    public static int rev(int n,int rev){
+        if(n==0){
+            return rev;
         }
-        System.out.println(rev);
+        else{
+            int lastdigit=n%10;
+             rev=rev*10+lastdigit;
+            return rev (n/10,rev);
+        }
+    }
+    public static void main(String[] args) {
+        int res=rev(5678,0);
+        System.out.println(res);
     }
 }
