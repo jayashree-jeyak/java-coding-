@@ -1,11 +1,13 @@
 class Even{
-    public static void main(String[] args) {
-         int n=9;
-         if(n%2==0){
-            System.out.println("is even number");
-         }
-         else{
-            System.out.println("is odd number");
-         }
+    public static void main(String[] args){
+        int[] arr={2,4,6,10};
+        int n=arr.length+1;
+        int total=n * (n+1);
+        int sum=0;
+        for(int i=0;i<arr.length;i++){
+            sum=sum+arr[i];
+        }
+        int miss=total-sum;
+        System.out.print(miss);
     }
 }
